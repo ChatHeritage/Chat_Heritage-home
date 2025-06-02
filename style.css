@@ -3,10 +3,14 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	overflow-x: hidden;
 	/* IE fallback */
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+}
+
+html {
+	width: 100%;
+	overflow-x: hidden;
 }
 
 body {
@@ -15,6 +19,9 @@ body {
 	color: #1a202c;
 	background-color: #ffffff;
 	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 	/* IE fallback */
 	font-feature-settings: normal;
 }
@@ -179,6 +186,8 @@ body {
 .hero {
 	background: linear-gradient(120deg, #8e5edc 0%, #408daa 50%, #02be65 100%);
 	min-height: 100vh;
+	width: 100vw;
+	margin-left: calc(50% - 50vw);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -373,7 +382,7 @@ body {
 }
 
 .step-badge {
-	background: #3b82f6;
+	background: #5b9aff;
 	color: white;
 	padding: 0.5rem 1rem;
 	border-radius: 12px;

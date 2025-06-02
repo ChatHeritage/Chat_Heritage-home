@@ -57,7 +57,7 @@
 		<!-- Header -->
 		<header class="header" id="header">
 			<div class="nav-container">
-				<a href="#" class="logo">iplan.ai</a>
+				<a href="#"><img src="https://raw.githubusercontent.com/ChatHeritage/Chat_Heritage-home/refs/heads/main/img/Logo_Chat_Heritage.png" alt="logochatheritage" class="logo"></a>
 				<nav>
 					<ul class="nav-menu">
 						<li><a href="#home">Home</a></li>
@@ -72,7 +72,11 @@
 					<span></span>
 					<span></span>
 				</div>
-				<a href="#" class="header-cta">Inizia ora!</a>
+				<!-- ELEMENTO DROPDOWN SELEZIONE LINGUA -->
+				<div class="dropdown" tab-index="0">
+					<button id="dropdown-btn"></button>
+					<ul class="dropdown-content" id="dropdown-content"></ul>
+				</div>
 			</div>
 		</header>
 
@@ -94,18 +98,18 @@
 				<section class="content-section slide-in-left" data-animation="slide-left">
 					<div class="image-container">
 						<div class="placeholder-image">
-							<img src="https://raw.githubusercontent.com/ChatHeritage/Chat_Heritage-home/refs/heads/main/img/LEONE_MARKER-IPHONE-3.png" alt="leone_iphone_1" class="image1">
+							<img src="https://raw.githubusercontent.com/ChatHeritage/Chat_Heritage-home/refs/heads/main/img/LEONE_MARKER-IPHONE-1.png" alt="leone_iphone_1" class="image1">
 						</div>
 					</div>
 					<div class="content-block">
-						<div class="step-badge">STEP 1</div>
-						<h2 class="content-title">Tell us what you enjoy the most. Our Artificial Intelligence will curate an itinerary matching all your needs.</h2>
+						<div class="step-badge">Step 1</div>
+						<h2 class="content-title">Scegli un percorso tra "Mappe generali" o "Misteri & Leggende".</h2>
 						<ul class="feature-list">
-							<li><i class="fa-solid fa-circle-check"></i>What is the purpose of your trip?</li>
-							<li><i class="fa-solid fa-circle-check"></i>What are your interests?</li>
-							<li><i class="fa-solid fa-circle-check"></i>With who do you go with?</li>
-							<li><i class="fa-solid fa-circle-check"></i>How long do you stay?</li>
-							<li><i class="fa-solid fa-circle-check"></i>What is your budget?</li>
+							<li><i class="fa-solid fa-circle-check"></i>Clicca sul percorso desiderato</li>
+							<li><i class="fa-solid fa-circle-check"></i>Si aprirà la relativa pagina</li>
+							<li><i class="fa-solid fa-circle-check"></i>Scopri in anteprima le tappe</li>
+							<li><i class="fa-solid fa-circle-check"></i>E' quello giusto per te?</li>
+							<li><i class="fa-solid fa-circle-check"></i>Clicca "Let's go!"</li>
 						</ul>
 					</div>
 				</section>
@@ -114,18 +118,18 @@
 				<section class="content-section slide-in-right" data-animation="slide-right">
 					<div class="image-container">
 						<div class="placeholder-image">
-							<img src="https://raw.githubusercontent.com/ChatHeritage/Chat_Heritage-home/refs/heads/main/img/LEONE_MARKER-IPHONE-3.png" alt="leone_iphone_2" class="image2">
+							<img src="https://raw.githubusercontent.com/ChatHeritage/Chat_Heritage-home/refs/heads/main/img/LEONE_MARKER-IPHONE-2.png" alt="leone_iphone_2" class="image2">
 						</div>
 					</div>
 					<div class="content-block">
-						<div class="step-badge">STEP 2</div>
-						<h2 class="content-title">Leave all the heavy lifting to us. Just enjoy your trip</h2>
+						<div class="step-badge">Step 2</div>
+						<h2 class="content-title">Avvia il chatbot guida. <br> Leo ti darà il benvenuto!</h2>
 						<ul class="feature-list">
-							<li><i class="fa-solid fa-circle-check"></i>What is the purpose of your trip?</li>
-							<li><i class="fa-solid fa-circle-check"></i>What are your interests?</li>
-							<li><i class="fa-solid fa-circle-check"></i>With who do you go with?</li>
-							<li><i class="fa-solid fa-circle-check"></i>How long do you stay?</li>
-							<li><i class="fa-solid fa-circle-check"></i>What is your budget?</li>
+							<li><i class="fa-solid fa-circle-check"></i>L'app Whatsapp si aprirà automaticamente</li>
+							<li><i class="fa-solid fa-circle-check"></i>Il chatbot del percorso è ora pronto</li>
+							<li><i class="fa-solid fa-circle-check"></i>Leggi "START CHAT ——>"</li>
+							<li><i class="fa-solid fa-circle-check"></i>Non cancellare questo messagio.</li>
+							<li><i class="fa-solid fa-circle-check"></i>Premi invece il tasto di invio!</li>
 						</ul>
 					</div>
 				</section>
@@ -138,10 +142,9 @@
 						</div>
 					</div>
 					<div class="content-block">
-						<div class="step-badge">STEP 3</div>
-						<h2 class="content-title">Customize your journey to perfection</h2>
-						<p class="content-description">Move, modify, or remove anything you want. With every change our AI will better adapt to your personal needs and updates the itinerary.</p>
-						<a href="#" class="header-cta mt-4">See More Popular Locations</a>
+						<div class="step-badge">Step 3</div>
+						<h2 class="content-title">Goditi l'avventura e interagisci con Leo. <br> Chatta con la storia!</h2>
+						<p class="content-description">Ce l'hai fatta! <br> Scopri Venezia in modo unico e speciale. Potrai decidere se preferire una guida virtuale testuale o una guida audio. <br> Tutto a portata di smartphone. <br> Buona esplorazione!</p>
 					</div>
 				</section>
 			</div>
@@ -254,7 +257,8 @@
 		</footer>
 
         <!-- JavaScript -->
-        <script src="script.js"></script>
+		<script src="script.js"></script>
+		<script src="script_lingue.js"></script>
         
 	</body>
 </html>

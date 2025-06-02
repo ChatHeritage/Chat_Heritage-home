@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- primary meta tags -->
+		<title>Chat Heritage - V2</title>
+		<meta name="title" content="Chat Heritage">
+		<meta name="description" content="Esplora il Sestiere di Dorsoduro a Venezia: percorso guidato tra arte, cultura e tradizione. Tour interattivo con mappa e chatbot Leo.">
+		<meta name="keywords" content="Dorsoduro, Venezia, tour guidato, Ca' Rezzonico, Peggy Guggenheim, Santa Maria della Salute">
+		<meta property="og:title" content="Chat Heritage - Sestiere di Dorsoduro">
+		<meta property="og:description" content="Percorso turistico interattivo nel cuore artistico di Venezia">
+		<meta property="og:image" content="[URL-immagine-preview]">
+		<!-- favicon -->
+		<link rel="shortcut icon" href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhotemoji.com%2Fimages%2Femoji%2F0%2Fmmj5ipu6ds50.png&f=1&nofb=1&ipt=49bdd956a93d8fbdd84720256334ecc308a67e3c8141a46371f22ea984c58492&ipo=images" type="image/svg+xml">
+		<!-- css link -->
+        <link rel="stylesheet" href="style.css" type="text/css" media="all">
+        <!-- google font link -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+		<!-- font awesome link -->
+		<script src="https://kit.fontawesome.com/ed4a3d9564.js" crossorigin="anonymous"></script>
+		<!-- Polyfills for older browsers -->
+		<script>
+			// Intersection Observer Polyfill
+			if (!('IntersectionObserver' in window)) {
+			    var script = document.createElement('script');
+			    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/intersection-observer/0.12.2/intersection-observer.js';
+			    document.head.appendChild(script);
+			}
+			
+			// CSS Grid Polyfill detection
+			if (!CSS.supports('display', 'grid')) {
+			    var link = document.createElement('link');
+			    link.rel = 'stylesheet';
+			    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/css-grid-polyfill/1.0.0/css-grid-polyfill.min.css';
+			    document.head.appendChild(link);
+			}
+			
+			// Object-fit polyfill for IE
+			if (!('objectFit' in document.documentElement.style)) {
+			    var script = document.createElement('script');
+			    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js';
+			    document.head.appendChild(script);
+			}
+		</script>
+		<style>
+
+		</style>
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="header" id="header">
+			<div class="nav-container">
+				<a href="#" class="logo">iplan.ai</a>
+				<nav>
+					<ul class="nav-menu">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#features">Chi Siamo</a></li>
+						<li><a href="#popular-locations">Luoghi popolari</a></li>
+						<li><a href="#guides">Guide & Consigli</a></li>
+						<li><a href="#about">Contatti</a></li>
+					</ul>
+				</nav>
+				<div class="mobile-menu-btn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<a href="#" class="header-cta">Inizia ora!</a>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero" id="home">
+			<div class="hero-content">
+				<h1 class="hero-title">Scegli. <br> Interagisci. <br> Esplora. <br> Chatta con la Storia!</h1>
+				<p class="hero-subtitle">Conoscere Venezia e le sue origni, ora non è mai stato così facile.</p>
+				<p class="hero-description">La cultura a portata di smartphone. Risparmia tempo.</p>
+				<a href="#" class="hero-cta">Scopri i nostri percorsi</a> 
+			</div>
+		</section>
+
+		<!-- Main Content -->
+		<main class="main-content">
+			<div class="container">
+
+				<!-- First Section -->
+				<section class="content-section slide-in-left" data-animation="slide-left">
+					<div class="image-container">
+						<div class="placeholder-image">
+							<img src="/img/LEONE_MARKER-IPHONE-3.png" alt="leone_iphone_3" class="image1">
+						</div>
+					</div>
+					<div class="content-block">
+						<div class="step-badge">STEP 1</div>
+						<h2 class="content-title">Tell us what you enjoy the most. Our Artificial Intelligence will curate an itinerary matching all your needs.</h2>
+						<ul class="feature-list">
+							<li><i class="fa-solid fa-circle-check"></i>What is the purpose of your trip?</li>
+							<li><i class="fa-solid fa-circle-check"></i>What are your interests?</li>
+							<li><i class="fa-solid fa-circle-check"></i>With who do you go with?</li>
+							<li><i class="fa-solid fa-circle-check"></i>How long do you stay?</li>
+							<li><i class="fa-solid fa-circle-check"></i>What is your budget?</li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- Second Section -->
+				<section class="content-section slide-in-right" data-animation="slide-right">
+					<div class="image-container">
+						<div class="placeholder-image">
+							<img src="/img/LEONE_MARKER-IPHONE-3.png" alt="leone_iphone_3" class="image2">
+						</div>
+					</div>
+					<div class="content-block">
+						<div class="step-badge">STEP 2</div>
+						<h2 class="content-title">Leave all the heavy lifting to us. Just enjoy your trip</h2>
+						<ul class="feature-list">
+							<li><i class="fa-solid fa-circle-check"></i>What is the purpose of your trip?</li>
+							<li><i class="fa-solid fa-circle-check"></i>What are your interests?</li>
+							<li><i class="fa-solid fa-circle-check"></i>With who do you go with?</li>
+							<li><i class="fa-solid fa-circle-check"></i>How long do you stay?</li>
+							<li><i class="fa-solid fa-circle-check"></i>What is your budget?</li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- Third Section -->
+				<section class="content-section slide-in-left" data-animation="slide-left">
+					<div class="image-container">
+						<div class="placeholder-image">
+							<img src="/img/LEONE_MARKER-IPHONE-3.png" alt="leone_iphone_3" class="image3">
+						</div>
+					</div>
+					<div class="content-block">
+						<div class="step-badge">STEP 3</div>
+						<h2 class="content-title">Customize your journey to perfection</h2>
+						<p class="content-description">Move, modify, or remove anything you want. With every change our AI will better adapt to your personal needs and updates the itinerary.</p>
+						<a href="#" class="header-cta mt-4">See More Popular Locations</a>
+					</div>
+				</section>
+			</div>
+		</main>
+
+		<!-- Testimonials Section -->
+		<section class="testimonials">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title">Every day more users are relying on iplan.ai to better plan their next trip</h2>
+				</div>
+				<div class="testimonials-grid">
+					<div class="testimonial-card">
+						<div class="testimonial-rating">★★★★★</div>
+						<p class="testimonial-content">"I am working as a professor in a college and I don't have time to make my travel plan on my own. I found this app very helpful in making my travel plan and it save me time. I can suggest this app to all the people who have no time to make their travel plan on their own."</p>
+						<div class="testimonial-author">
+							<div class="author-avatar">P</div>
+							<div class="author-info">
+								<h4>Professor</h4>
+								<p>7 Jan, 2022</p>
+							</div>
+						</div>
+					</div>
+					<div class="testimonial-card">
+						<div class="testimonial-rating">★★★★★</div>
+						<p class="testimonial-content">"I was looking for a fast and easy way to plan our next family trip and iplan.ai did everything for me! I have already recommended this travel planner to several friends and family members."</p>
+						<div class="testimonial-author">
+							<div class="author-avatar">F</div>
+							<div class="author-info">
+								<h4>Family Traveler</h4>
+								<p>7 Jan, 2022</p>
+							</div>
+						</div>
+					</div>
+					<div class="testimonial-card">
+						<div class="testimonial-rating">★★★★★</div>
+						<p class="testimonial-content">"I was thinking of my upcoming trip to Europe and suddenly I had no time to make my travel plan. So I started checking the internet for travel planners and at last, I found iplan.ai the best travel planner you can find on the internet. It is easy to use and very helpful for those who have no time for this kind of thing. I really like it!"</p>
+						<div class="testimonial-author">
+							<div class="author-avatar">E</div>
+							<div class="author-info">
+								<h4>Europe Traveler</h4>
+								<p>7 Jan, 2022</p>
+							</div>
+						</div>
+					</div>
+					<div class="testimonial-card">
+						<div class="testimonial-rating">★★★★★</div>
+						<p class="testimonial-content">"This application really saved my time, I cant wait to use it again for my next trip. totally recommended"</p>
+						<div class="testimonial-author">
+							<div class="author-avatar">T</div>
+							<div class="author-info">
+								<h4>Frequent Traveler</h4>
+								<p>4 Dec, 2021</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="cta-section">
+			<div class="cta-content">
+				<h2 class="cta-title">Ready to plan your perfect trip?</h2>
+				<p class="cta-description">Join thousands of travelers who have discovered the power of AI-assisted travel planning. Create your personalized itinerary in minutes.</p>
+				<a href="#" class="cta-button">Start Planning for Free</a>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-section">
+						<h3>iplan.ai</h3>
+						<p>Your smart travel planner powered by artificial intelligence. Create personalized itineraries that match your interests, budget, and travel style.</p>
+					</div>
+					<div class="footer-section">
+						<h3>Product</h3>
+						<ul class="footer-links">
+							<li><a href="#">Features</a></li>
+							<li><a href="#">Popular Locations</a></li>
+							<li><a href="#">Mobile App</a></li>
+							<li><a href="#">Pricing</a></li>
+						</ul>
+					</div>
+					<div class="footer-section">
+						<h3>Resources</h3>
+						<ul class="footer-links">
+							<li><a href="#">Guides & Tips</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Help Center</a></li>
+							<li><a href="#">API</a></li>
+						</ul>
+					</div>
+					<div class="footer-section">
+						<h3>Company</h3>
+						<ul class="footer-links">
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Terms of Service</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p>&copy; 2025 iplan.ai - Your smart travel planner. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+
+        <!-- JavaScript -->
+        <script src="script.js"></script>
+        
+	</body>
+</html>

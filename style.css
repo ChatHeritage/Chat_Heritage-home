@@ -44,13 +44,7 @@ body {
 		 0px -2px 0 #1a1a1a,
 		 0px  2px 0 #1a1a1a,
 		-2px  0px 0 #1a1a1a,
-		 2px  0px 0 #1a1a1a,
-		/* Layer 3: Ombre morbide per profondità */
-		0 4px 8px rgba(0, 0, 0, 0.25),
-		0 6px 12px rgba(0, 0, 0, 0.15),
-		0 8px 16px rgba(0, 0, 0, 0.1),
-		/* Layer 4: Ombra finale per drammaticità */
-		0 12px 24px rgba(0, 0, 0, 0.08);
+		 2px  0px 0 #1a1a1a;
 	/* Ottimizzazioni rendering */
 	transform: translateZ(0); /* Hardware acceleration */
 	will-change: transform; /* Ottimizza per animazioni */
@@ -319,20 +313,30 @@ body {
 	border-radius: 2px;
 }
 
-/* Hero Section */
+/******************** Hero Section ************************/
 .hero {
-	background: linear-gradient(120deg, #8e5edc 0%, #408daa 50%, #02be65 100%);
-	min-height: 100vh;
-	width: 100vw;
-	margin-left: calc(50% - 50vw);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: white;
-	text-align: center;
-	position: relative;
-	overflow: hidden;
-	padding: 100px 2rem 60px;
+    background: linear-gradient(120deg, #8e5edc 0%, #408daa 50%, #02be65 100%);
+    min-height: 100vh;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 2rem 60px;
+}
+.hero::after {
+    /*content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.8) 80%, #ffffff 100%);
+    pointer-events: none;*/
 }
 
 /* LEONE IMMAGINE - RESPONSIVE OTTIMIZZATO */
@@ -363,7 +367,7 @@ body {
 }
 
 .hero-title {
-	font-size: clamp(2.5rem, 5vw, 4.5rem);
+	/*font-size: clamp(2.5rem, 5vw, 4.5rem);*/
 	font-weight: 800;
 	line-height: 1.1;
 	margin-bottom: 1.5rem;
@@ -374,7 +378,7 @@ body {
 .hero-subtitle {
 	font-size: 1.5rem;
 	font-weight: 500;
-	margin-bottom: 2.5rem;
+	margin-bottom: 2.0rem;
 	opacity: 1;
 	letter-spacing: 0em;
 	text-align: left;
@@ -391,25 +395,82 @@ body {
 	text-align: left;
 }
 
+/********* HERO CTA - è il pulsante *************************/
 .hero-cta {
-	background: rgba(255, 255, 255, 0.95);
-	color: #3b82f6;
-	padding: 1rem 2.5rem;
+	/* Gradiente che richiama il tema travel/exploration */
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	padding: 1.2rem 2.8rem;
 	border: none;
-	border-radius: 12px;
-	font-size: 1.1rem;
+	border-radius: 50px; /* Più arrotondato e moderno */
+	font-size: 1.2rem;
 	font-weight: 700;
 	cursor: pointer;
-	transition: all 0.3s ease;
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	text-decoration: none;
-	display: inline-block;
-	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+	letter-spacing: 0.05em;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.8rem;
+	position: relative;
+	overflow: hidden;
+	/* Ombra più sofisticata */
+	box-shadow: 
+		0 8px 32px rgba(102, 126, 234, 0.4),
+		0 4px 16px rgba(0, 0, 0, 0.1),
+		inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	/* Effetto text-shadow per leggibilità */
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	/* Border sottile per eleganza */
+	border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
+/* Icona integrata nel bottone */
+.hero-cta::before {
+	font-size: 1.2rem;
+	filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+/* Effetto shimmer animato */
+.hero-cta::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		90deg, 
+		transparent, 
+		rgba(252, 255, 83, 0.562), 
+		transparent
+	);
+	transition: left 0.5s ease;
+}
+/* Hover effects */
 .hero-cta:hover {
-	transform: translateY(-3px);
-	box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-	background: white;
+	transform: translateY(-4px) scale(1.02);
+	background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+	box-shadow: 
+		0 16px 48px rgba(102, 126, 234, 0.5),
+		0 8px 24px rgba(0, 0, 0, 0.15),
+		inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+/* Attiva effetto shimmer on hover */
+.hero-cta:hover::after {
+	left: 100%;
+}
+/* Active state */
+.hero-cta:active {
+	transform: translateY(-2px) scale(1.01);
+	transition: all 0.1s ease;
+}
+/* Focus per accessibilità */
+.hero-cta:focus {
+	outline: none;
+	box-shadow: 
+		0 16px 48px rgba(102, 126, 234, 0.5),
+		0 8px 24px rgba(0, 0, 0, 0.15),
+		0 0 0 3px rgba(102, 126, 234, 0.3);
 }
 
 /* Main Content */

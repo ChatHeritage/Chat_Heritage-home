@@ -87,28 +87,43 @@
 	}
 
 	.hero-content {
-		margin-bottom: clamp(-60vh, -45vh, -25vh);
+		margin-bottom: clamp(-60vh, -35vh, -25vh);
+	}
+
+	.hero-title {
+		font-size: clamp(2.2rem, 6vh, 7rem); /* Ottimizzato per migliore adattamento vh */
+		max-width: 100%; /* Cambiato da 480px a 100% per utilizzare tutto lo spazio disponibile */
+		white-space: nowrap; /* Impedisce l'andare a capo */
+		overflow: hidden; /* Nasconde eventuale overflow */
+		text-overflow: ellipsis; /* Aggiunge ... se il testo è troppo lungo (opzionale) */
 	}
 
     .hero-leoimg {
 		/* Dimensioni ultra-responsive con clamp() ottimizzato */
-		width: clamp(150px, 25vw, 220px); /* Ridotto per schermi piccoli */
+		width: clamp(120px, 30vh, 280px); /* Aumentato vh per ingrandimento proporzionale */
 		height: auto; /* Mantiene proporzioni */
-		
 		/* Posizionamento ottimizzato per mobile */
 		top: clamp(60px, 50vh, 100px); /* Responsive anche in verticale */
 		right: clamp(10px, 3vw, 25px); /* Margine responsive dal bordo */
-		
 		/* Ottimizzazioni per performance mobile */
 		transform: translateZ(0); /* Hardware acceleration */
 		will-change: transform; /* Ottimizza animazioni */
-		
 		/* Riduce filtri pesanti su mobile */
 		filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.9));
-		
 		/* Assicura visibilità su schermi molto piccoli */
-		max-width: 35vw; /* Non supera mai il 35% della larghezza */
-		min-width: 220px; /* Dimensione minima leggibile */
+		/*max-width: 35vw; /* Non supera mai il 35% della larghezza */
+		/*min-width: 220px; /* Dimensione minima leggibile */
+	}
+
+	.hero-cta {
+		font-size: 0.95rem;
+		padding: 0.9rem 2rem;
+		width: fit-content;
+		min-width: 200px;
+		filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+	}
+	.hero-cta::before {
+		font-size: 1.1rem;
 	}
 
 	.content-block {

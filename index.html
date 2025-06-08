@@ -1,25 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Dinamico per multilingua -->
+<html lang="it" id="html-root">
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- primary meta tags -->
-		<title>Chat Heritage - V2</title>
+		<title>Chat Heritage Venice</title>
 		<meta name="title" content="Chat Heritage">
-		<meta name="description" content="Esplora il Sestiere di Dorsoduro a Venezia: percorso guidato tra arte, cultura e tradizione. Tour interattivo con mappa e chatbot Leo.">
-		<meta name="keywords" content="Dorsoduro, Venezia, tour guidato, Ca' Rezzonico, Peggy Guggenheim, Santa Maria della Salute">
-		<meta property="og:title" content="Chat Heritage - Sestiere di Dorsoduro">
-		<meta property="og:description" content="Percorso turistico interattivo nel cuore artistico di Venezia">
+		<meta name="description" content="Scopri Venezia con Chat Heritage: tour guidati interattivi attraverso chatbot Leo. Itinerari unici tra monumenti iconici e misteri della Serenissima.">
+		<meta name="keywords" content="Venezia tour, chatbot guida turistica, itinerari Venezia, Chat Heritage, Leo chatbot, tour interattivi Venezia, guida virtuale">
+		<!-- Per indicare ai motori di ricerca le versioni alternative -->
+		<link rel="alternate" hreflang="it" href="https://tuodominio.com/it/">
+		<link rel="alternate" hreflang="en" href="https://tuodominio.com/en/">
+		<link rel="alternate" hreflang="x-default" href="https://tuodominio.com/">
+		<!-- og meta tags -->
+		<meta property="og:title" content="Chat Heritage Venice">
+		<meta property="og:description" content="Percorsi turistici interattivi nell'isola di Venezia">
 		<meta property="og:image" content="[URL-immagine-preview]">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="[URL-pagina]">
+		<meta property="og:image:alt" content="Chat Heritage Venice">
+		<!-- og:locale -->
+		<meta property="og:locale" content="it_IT">
+		<!-- og:locale:alternate -->
+		<meta property="og:locale:alternate" content="x-default">
+		<!-- og:region -->
+		<meta property="og:region" content="IT">
+		<!-- og:country-name -->
+		<meta property="og:country-name" content="Italy">
+		<!-- og:determiner -->
+		<meta property="og:determiner" content="the">
+		<!-- og:site_name -->
+		<meta property="og:site_name" content="Chat Heritage">
+		<!-- og:locale:alternate -->
+		<meta property="og:locale:alternate" content="en_US">
+		<!-- og:locale:alternate -->
+		<meta property="og:locale:alternate" content="fr_FR">
+		<!-- og:locale:alternate -->
+		<meta property="og:locale:alternate" content="de_DE">
+		<!-- og:locale:alternate -->
+		<meta property="og:locale:alternate" content="es_ES">
+		<!-- og:locale:alternate -->
+		<meta property="og:locale:alternate" content="pt_PT">
+		<!-- og:locale:alternate -->
+		<meta property="og:locale:alternate" content="ru_RU">
+		<!-- og:locale:alternate -->
+		<meta property="og:locale:alternate" content="zh_CN">
 		<!-- favicon -->
-		<link rel="shortcut icon" href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhotemoji.com%2Fimages%2Femoji%2F0%2Fmmj5ipu6ds50.png&f=1&nofb=1&ipt=49bdd956a93d8fbdd84720256334ecc308a67e3c8141a46371f22ea984c58492&ipo=images" type="image/svg+xml">
+		<link rel="shortcut icon" href="https://raw.githubusercontent.com/ChatHeritage/Chat_Heritage-home/refs/heads/main/img/FAVICON_CHAT_HERITAGE.png" type="image/svg+xml">
 		<!-- css link -->
         <link rel="stylesheet" href="style.css" type="text/css" media="all">
-		<link rel="stylesheet" href="mediaqueries.css" type="text/css" media="all">
+		<link rel="stylesheet" href="media_queries.css" type="text/css" media="all">
         <!-- google font link -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<!-- I MIGLIORI FONT AL LINK: https://www.instagram.com/p/DHBPc__KjZJ/?img_index=1 -->
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
@@ -84,10 +120,10 @@
 
 		<!-- Hero Section -->
 		<section class="hero" id="home">
-			<img src="https://raw.githubusercontent.com/ChatHeritage/Chat_Heritage-home/refs/heads/main/img/LEOPRESENTAZIONEHERO.png" alt="leopresentazionehero" class="hero-leoimg">
+			<img src="https://raw.githubusercontent.com/ChatHeritage/Chat_Heritage-home/refs/heads/main/img/LEOPRESENTAZIONEHERO-2.png" alt="leopresentazionehero" class="hero-leoimg">
 			<div class="hero-content">
 				<h1 class="hero-title">Scegli. <br> Interagisci. <br> Esplora. Conosci.</h1>
-				<p class="hero-subtitle">Venezia e le sue origni. Te le raccontiamo noi attraverso itinerari unici e selezionati.</p>
+				<p class="hero-subtitle">Venezia e le sue origini. Te le raccontiamo noi attraverso itinerari unici e selezionati.</p>
 				<!--<p class="hero-description">La cultura a portata di smartphone. Risparmia tempo.</p>-->
 				<a href="#" class="hero-cta">Scopri i nostri percorsi</a>
 			</div>
@@ -106,13 +142,12 @@
 					</div>
 					<div class="content-block">
 						<div class="step-badge">Step 1</div>
-						<h2 class="content-title">Scegli un percorso tra "Monumenti iconici" o "Misteri & Leggende".</h2>
+						<h2 class="content-title">"Monumenti iconici" o "Misteri & Leggende"?</h2>
 						<ul class="feature-list">
-							<li><i class="fa-solid fa-circle-check"></i>Clicca sul percorso desiderato</li>
-							<li><i class="fa-solid fa-circle-check"></i>Si aprirà la relativa pagina</li>
-							<li><i class="fa-solid fa-circle-check"></i>Scopri in anteprima le tappe</li>
-							<li><i class="fa-solid fa-circle-check"></i>E' quello giusto per te?</li>
-							<li><i class="fa-solid fa-circle-check"></i>Clicca "Let's go!"</li>
+							<li><i class="fa-solid fa-circle-check"></i>Disponibili 2 tipologie di itinerari</li>
+							<li><i class="fa-solid fa-circle-check"></i>Scegli l'itinerario desiderato</li>
+							<li><i class="fa-solid fa-circle-check"></i>Cliccalo per scoprirne i dettagli</li>
+							<li><i class="fa-solid fa-circle-check"></i>Premi su "Let's go!"</li>
 						</ul>
 					</div>
 				</section>
@@ -126,13 +161,11 @@
 					</div>
 					<div class="content-block">
 						<div class="step-badge">Step 2</div>
-						<h2 class="content-title">Avvia il chatbot guida. <br> Leo ti darà il benvenuto!</h2>
+						<h2 class="content-title">Avvia la guida-chatbot. <br> Leo ti darà il benvenuto!</h2>
 						<ul class="feature-list">
-							<li><i class="fa-solid fa-circle-check"></i>L'app Whatsapp si aprirà automaticamente</li>
-							<li><i class="fa-solid fa-circle-check"></i>Il chatbot del percorso è ora pronto</li>
-							<li><i class="fa-solid fa-circle-check"></i>Leggi "START CHAT ——>"</li>
-							<li><i class="fa-solid fa-circle-check"></i>Non cancellare questo messagio.</li>
-							<li><i class="fa-solid fa-circle-check"></i>Premi invece il tasto di invio!</li>
+							<li><i class="fa-solid fa-circle-check"></i>WhatsApp si aprirà automaticamente</li>
+							<li><i class="fa-solid fa-circle-check"></i>Leo è pronto ad accompagnarti</li>
+							<li><i class="fa-solid fa-circle-check"></i>Premi subito il tasto <img src="https://raw.githubusercontent.com/ChatHeritage/Chat_Heritage-home/refs/heads/main/img/ICONA_INVIO_WHATSAPP.png" alt="whatsappicon" class="whatsappicon"></li>
 						</ul>
 					</div>
 				</section>
@@ -141,69 +174,65 @@
 				<section class="content-section slide-in-left" data-animation="slide-left">
 					<div class="image-container">
 						<div class="placeholder-image">
-							<img src="https://raw.githubusercontent.com/ChatHeritage/Chat_Heritage-home/refs/heads/main/img/LEONE_MARKER-IPHONE-3.png" alt="leone_iphone_3" class="image3">
+							<img src="https://raw.githubusercontent.com/ChatHeritage/Chat_Heritage-home/refs/heads/main/img/GIF_STEP_3%2B4.gif" alt="leone_iphone_3" class="image3">
 						</div>
 					</div>
 					<div class="content-block">
 						<div class="step-badge">Step 3</div>
-						<h2 class="content-title">Goditi l'avventura e interagisci con Leo. <br> Chatta con la storia!</h2>
-						<p class="content-description">Ce l'hai fatta! <br> Scopri Venezia in modo unico e speciale. Potrai decidere se preferire una guida virtuale testuale o una guida audio. <br> Tutto a portata di smartphone. <br> Buona esplorazione!</p>
+						<h2 class="content-title">Immergiti nel tuo itinerario: <br> interagisci con Leo!</h2>
+						<p class="content-description"><i class="fa-regular fa-thumbs-up"></i>&nbspCe l'hai fatta! <br> Scopri Venezia in modo unico e speciale. Potrai decidere se preferire una guida virtuale testuale o una guida audio. <br> Tutto a portata di smartphone. <br> Buona esplorazione!</p>
 					</div>
 				</section>
 			</div>
 		</main>
 
-		<!-- Testimonials Section -->
-		<section class="testimonials">
+		<!-- Itineraries Section Carousel -->
+		<section class="itineraries">
 			<div class="container">
 				<div class="section-header">
-					<h2 class="section-title">Every day more users are relying on iplan.ai to better plan their next trip</h2>
+					<h2 class="section-title">Scopri gli itinerari</h2>
+					<p class="section-subtitle">Clicca il pulsante "Scopri di più" sull'itinerario desiderato ed immergiti subito nella storia di Venezia!</p>
 				</div>
-				<div class="testimonials-grid">
-					<div class="testimonial-card">
-						<div class="testimonial-rating">★★★★★</div>
-						<p class="testimonial-content">"I am working as a professor in a college and I don't have time to make my travel plan on my own. I found this app very helpful in making my travel plan and it save me time. I can suggest this app to all the people who have no time to make their travel plan on their own."</p>
-						<div class="testimonial-author">
-							<div class="author-avatar">P</div>
-							<div class="author-info">
-								<h4>Professor</h4>
-								<p>7 Jan, 2022</p>
-							</div>
-						</div>
+				<div class="itineraries-grid">
+					<div class="itinerary-card mi">
+						<img src="https://raw.githubusercontent.com/ChatHeritage/Chat_Heritage-home/refs/heads/main/img/compress-DORSODURO_CARD.png" alt="itinerario-mi1" class="itinerary-image mi">
+						<h3 class="itinerary-title">Monumenti Iconici</h3>
+						<p class="itinerary-description">Percorso: <br> Sestiere di Dorsosuro</p>
+						<a href="#" class="itinerary-button mi">Scopri di più</a>
 					</div>
-					<div class="testimonial-card">
-						<div class="testimonial-rating">★★★★★</div>
-						<p class="testimonial-content">"I was looking for a fast and easy way to plan our next family trip and iplan.ai did everything for me! I have already recommended this travel planner to several friends and family members."</p>
-						<div class="testimonial-author">
-							<div class="author-avatar">F</div>
-							<div class="author-info">
-								<h4>Family Traveler</h4>
-								<p>7 Jan, 2022</p>
-							</div>
-						</div>
+					<div class="itinerary-card mi">
+						<img src="https://raw.githubusercontent.com/ChatHeritage/Chat_Heritage-home/refs/heads/main/img/compress-SANMARCO_CARD.png" alt="itinerario-mi2" class="itinerary-image mi">
+						<h3 class="itinerary-title">Monumenti Iconici</h3>
+						<p class="itinerary-description">Percorso: <br> Sestiere di San Marco</p>
+						<a href="#" class="itinerary-button mi">Scopri di più</a>
 					</div>
-					<div class="testimonial-card">
-						<div class="testimonial-rating">★★★★★</div>
-						<p class="testimonial-content">"I was thinking of my upcoming trip to Europe and suddenly I had no time to make my travel plan. So I started checking the internet for travel planners and at last, I found iplan.ai the best travel planner you can find on the internet. It is easy to use and very helpful for those who have no time for this kind of thing. I really like it!"</p>
-						<div class="testimonial-author">
-							<div class="author-avatar">E</div>
-							<div class="author-info">
-								<h4>Europe Traveler</h4>
-								<p>7 Jan, 2022</p>
-							</div>
-						</div>
+					<div class="itinerary-card m&l">
+						<img src="https://raw.githubusercontent.com/ChatHeritage/Chat_Heritage-home/refs/heads/main/img/compress-CANNAREGIO_CARD.png" alt="itinerario-m&l1" class="itinerary-image m&l">
+						<h3 class="itinerary-title">Misteri&Leggende</h3>
+						<p class="itinerary-description">Percorso: <br> Sestiere di Cannaregio</p>
+						<a href="#" class="itinerary-button m&l">Scopri di più</a>
 					</div>
-					<div class="testimonial-card">
-						<div class="testimonial-rating">★★★★★</div>
-						<p class="testimonial-content">"This application really saved my time, I cant wait to use it again for my next trip. totally recommended"</p>
-						<div class="testimonial-author">
-							<div class="author-avatar">T</div>
-							<div class="author-info">
-								<h4>Frequent Traveler</h4>
-								<p>4 Dec, 2021</p>
-							</div>
-						</div>
+					<div class="itinerary-card m&l">
+						<img src="https://raw.githubusercontent.com/ChatHeritage/Chat_Heritage-home/refs/heads/main/img/compress-RIALTO_SANMARCO_CARD.png" alt="itinerario-m&l2" class="itinerary-image m&l">
+						<h3 class="itinerary-title">Misteri&Leggende</h3>
+						<p class="itinerary-description">Percorso: <br> Da Rialto a San Marco</p>
+						<a href="#" class="itinerary-button m&l">Scopri di più</a>
 					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Form richiesta EMail Section -->
+		<section class="form-section">
+			<div class="container">
+				<div class="form-content">
+					<h2 class="form-title">Ricevi in anteprima tutte le novità di Chat Heritage!</h2>
+					<p class="form-description">Inserisci il tuo nome ed il tuo indirizzo email per ricevere gli ultimi aggiornamenti sul nostro servizio.</p>
+					<form action="#" method="post">
+						<input type="text" id="name" name="name" placeholder="Inserisci il tuo nome" required>
+						<input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
+						<button type="submit">Invia</button>
+					</form>
 				</div>
 			</div>
 		</section>
@@ -211,9 +240,9 @@
 		<!-- CTA Section -->
 		<section class="cta-section">
 			<div class="cta-content">
-				<h2 class="cta-title">Ready to plan your perfect trip?</h2>
-				<p class="cta-description">Join thousands of travelers who have discovered the power of AI-assisted travel planning. Create your personalized itinerary in minutes.</p>
-				<a href="#" class="cta-button">Start Planning for Free</a>
+				<h2 class="cta-title">Pronto a pianificare il tuo viaggio perfetto?</h2>
+				<p class="cta-description">Unisciti a migliaia di viaggiatori che hanno scoperto il potere della pianificazione turistica assistita da AI. Crea il tuo itinerario personalizzato in pochi minuti.</p>
+				<a href="#" class="cta-button">Inizia Gratis</a>
 			</div>
 		</section>
 
@@ -222,39 +251,37 @@
 			<div class="container">
 				<div class="footer-content">
 					<div class="footer-section">
-						<h3>iplan.ai</h3>
-						<p>Your smart travel planner powered by artificial intelligence. Create personalized itineraries that match your interests, budget, and travel style.</p>
+						<h3>Chat Heritage</h3>
+						<p>La tua guida-chatbot virtuale per scoprire Venezia e la sua storia in modo unico e speciale. Risparmia tempo, pianificazione e budget.</p>
 					</div>
 					<div class="footer-section">
-						<h3>Product</h3>
+						<h3>Il Servizio</h3>
 						<ul class="footer-links">
-							<li><a href="#">Features</a></li>
-							<li><a href="#">Popular Locations</a></li>
-							<li><a href="#">Mobile App</a></li>
-							<li><a href="#">Pricing</a></li>
+							<li><a href="#">Caratteristiche</a></li>
+							<li><a href="#">Tappe popolari</a></li>
+							<li><a href="#">Costi</a></li>
 						</ul>
 					</div>
 					<div class="footer-section">
-						<h3>Resources</h3>
+						<h3>Risorse</h3>
 						<ul class="footer-links">
-							<li><a href="#">Guides & Tips</a></li>
+							<li><a href="#">Guide e Consigli</a></li>
 							<li><a href="#">Blog</a></li>
-							<li><a href="#">Help Center</a></li>
-							<li><a href="#">API</a></li>
+							<li><a href="#">Centro d'aiuto</a></li>
 						</ul>
 					</div>
 					<div class="footer-section">
-						<h3>Company</h3>
+						<h3>Azienda</h3>
 						<ul class="footer-links">
-							<li><a href="#">About Us</a></li>
-							<li><a href="#">Contact</a></li>
+							<li><a href="#">Chi Siamo</a></li>
+							<li><a href="#">Contatti</a></li>
 							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Terms of Service</a></li>
+							<li><a href="#">Termini di Servizio</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="footer-bottom">
-					<p>&copy; 2025 iplan.ai - Your smart travel planner. All rights reserved.</p>
+					<p>&copy; 2025 Chat Heritage - Chatta con la Storia! Tutti i diritti riservati.</p>
 				</div>
 			</div>
 		</footer>

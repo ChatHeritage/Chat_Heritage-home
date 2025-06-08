@@ -1,0 +1,1255 @@
+/* ================================================================
+   CHAT HERITAGE - MEDIA QUERIES OTTIMIZZATE (MOBILE-FIRST)
+   MANTIENE COLORI ORIGINALI E PRESERVA @media 480px ESISTENTE
+   ================================================================ */
+
+/* ================================================================================================================================================================================================
+   1. MOBILE EXTRA SMALL (320px - 374px)
+   ================================================================================================================================================================================================ */
+
+   @media screen and (max-width: 374px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    .hero {
+        padding: 100px 0.75rem 50px;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.8rem, 8vw, 2.2rem);
+        line-height: 1.1;
+        white-space: normal;
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1rem, 5vw, 1.2rem);
+    }
+    
+    .hero-cta {
+        font-size: 0.85rem;
+        padding: 0.8rem 1.5rem;
+        min-width: 180px;
+    }
+    
+    .nav-container {
+        padding: 0 0.75rem;
+    }
+    
+    .dropdown button {
+        min-width: 100px;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .content-title {
+        font-size: 1.8rem;
+    }
+    
+    .content-section {
+        margin-bottom: 50px;
+    }
+}
+
+/* ================================================================================================================================================================================================
+   2. MOBILE SMALL (375px - 479px) 
+   ================================================================================================================================================================================================ */
+
+@media screen and (min-width: 375px) and (max-width: 479px) {
+    .hero-title {
+        font-size: clamp(2rem, 7vw, 2.4rem);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1.1rem, 4vw, 1.3rem);
+    }
+    
+    .content-title {
+        font-size: clamp(1.9rem, 6vw, 2.1rem);
+    }
+    
+    .step-badge {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .feature-list li {
+        font-size: 1.05rem;
+    }
+    
+    .content-block {
+        padding: 0 0.5rem;
+    }
+}
+
+/* ================================================================
+   3. MOBILE STANDARD (480px) - MANTIENE CODICE ORIGINALE
+   ================================================================ */
+
+   @media screen and (max-width: 480px) {
+    /* ================================================================
+       BASE CONTAINER E LAYOUT FUNDAMENTALS
+       ================================================================ */
+    
+    .container {
+        padding: 0 1rem;
+        /* Performance optimization */
+        contain: layout style;
+        will-change: auto; /* Reset will-change when not animating */
+    }
+
+    .testimonial-card {
+        padding: 2rem;
+        /* Touch optimization */
+        touch-action: manipulation;
+        /* Performance */
+        contain: layout style paint;
+        backface-visibility: hidden;
+    }
+
+    .nav-menu li {
+        margin-right: 1.5rem;
+        /* Touch target compliance */
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* ================================================================
+       HERO SECTION - ENTERPRISE OPTIMIZATIONS
+       ================================================================ */
+    
+    .hero-content {
+        margin-bottom: clamp(-60vh, -35vh, -25vh);
+        /* Typography optimization */
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "kern" 1, "liga" 1;
+        /* Layout containment */
+        contain: layout style;
+    }
+
+    .hero-title {
+        font-size: clamp(2.2rem, 6vh, 7rem); /* Ottimizzato per migliore adattamento vh */
+        max-width: 100%; /* Cambiato da 480px a 100% per utilizzare tutto lo spazio disponibile */
+        /* Enterprise typography enhancements */
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+        word-break: break-word; /* Evita overflow su parole lunghe */
+        overflow-wrap: break-word; /* Fallback per browser meno recenti */
+        hyphens: auto; /* Sillabazione automatica se supportata */
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        /* Performance optimizations */
+        contain: layout style;
+        transform: translateZ(0); /* Hardware acceleration */
+        will-change: transform; /* Ottimizza per animazioni */
+        backface-visibility: hidden; /* Evita flickering */
+    }
+
+    .hero-leoimg {
+        /* Dimensioni ultra-responsive con clamp() ottimizzato */
+        width: clamp(120px, 35vh, 280px); /* Aumentato vh per ingrandimento proporzionale */
+        height: auto; /* Mantiene proporzioni */
+        /* Posizionamento ottimizzato per mobile */
+        top: clamp(60px, 50vh, 100px); /* Responsive anche in verticale */
+        right: clamp(10px, 3vw, 25px); /* Margine responsive dal bordo */
+        /* Enterprise performance optimizations */
+        transform: translateZ(0); /* Hardware acceleration */
+        will-change: transform; /* Ottimizza animazioni */
+        contain: layout style paint; /* Ottimizzazione rendering avanzata */
+        backface-visibility: hidden; /* Evita flickering durante animazioni */
+        /* Riduce filtri pesanti su mobile */
+        filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.9));
+        /* Image optimization */
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        /* Assicura visibilità su schermi molto piccoli */
+        /*max-width: 35vw; /* Non supera mai il 35% della larghezza */
+        /*min-width: 220px; /* Dimensione minima leggibile */
+        /* Lazy loading hint */
+        content-visibility: auto;
+        contain-intrinsic-size: 280px 280px; /* Hint per layout shift prevention */
+    }
+
+    .hero-cta {
+        font-size: 0.95rem;
+        padding: 0.9rem 2rem;
+        width: fit-content;
+        min-width: 200px;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+        /* Enterprise UX optimizations */
+        min-height: 44px; /* Apple/Google touch target minimum */
+        touch-action: manipulation; /* Evita double-tap zoom */
+        cursor: pointer; /* Esplicito per tutti i dispositivi */
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1); /* Tap feedback iOS */
+        /* Performance */
+        contain: layout style;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        /* Typography */
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "kern" 1;
+        /* Accessibility */
+        outline-offset: 2px;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .hero-cta::before {
+        font-size: 1.1rem;
+        /* Performance optimization */
+        will-change: auto;
+        backface-visibility: hidden;
+    }
+
+    /* ================================================================
+       CONTENT SECTIONS - LAYOUT OPTIMIZATIONS
+       ================================================================ */
+    
+    .content-block {
+        padding: 0;
+        /* Layout performance */
+        contain: layout style;
+        /* Typography optimization */
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "kern" 1, "liga" 1;
+    }
+
+    /* ================================================================
+       CAROUSEL CARDS SECTION - ENTERPRISE TOUCH & PERFORMANCE
+       ================================================================ */
+    
+    .itineraries {
+        padding: 80px 0;
+        /* Performance containment */
+        contain: layout style;
+        /* Scroll performance */
+        overflow: hidden;
+    }
+    
+    .itineraries .section-title {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+        margin-bottom: 0.8rem;
+        /* Typography optimization */
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "kern" 1, "liga" 1;
+        /* Performance */
+        contain: layout style;
+    }
+    
+    .itineraries .section-subtitle {
+        /*font-size: clamp(1rem, 4vw, 1.2rem);*/
+        padding: 0 1rem;
+        /* Enterprise UX improvements */
+        text-align: center; /* Esplicito per sicurezza */
+        max-width: 100%; /* Evita overflow */
+        word-wrap: break-word; /* Wrapping sicuro */
+        overflow-wrap: break-word; /* Fallback */
+        hyphens: auto; /* Sillabazione se necessaria */
+        -webkit-hyphens: auto;
+        /* Typography */
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "kern" 1;
+    }
+    
+    .itineraries .section-header {
+        margin-bottom: 2.5rem;
+        /* Performance */
+        contain: layout style;
+    }
+
+    /* ================================================================
+       MOBILE DRAG CAROUSEL - ENTERPRISE TOUCH EXPERIENCE
+       ================================================================ */
+    
+    .itineraries-grid {
+        gap: 1.5rem;
+        padding: 1.5rem 0 2rem 1rem;
+        margin-right: -1rem;
+        /* Migliore responsività touch - COMPORTAMENTO ORIGINALE */
+        touch-action: pan-x;
+        -webkit-overflow-scrolling: touch;
+        /* Performance optimizations mantenendo scroll naturale */
+        contain: layout style;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        /* Nasconde scrollbar mantenendo scroll fluido */
+        -ms-overflow-style: none; /* Nasconde scrollbar IE */
+        scrollbar-width: none; /* Nasconde scrollbar Firefox */
+    }
+
+    /* Nasconde scrollbar WebKit */
+    .itineraries-grid::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    /* ================================================================
+       MOBILE CARDS - ENTERPRISE PERFORMANCE & UX
+       ================================================================ */
+    
+    .itinerary-card {
+        flex: 0 0 280px;
+        border-radius: 20px;
+        /* Enterprise performance optimizations - SCROLL NATURALE */
+        transform: translateZ(0); /* Ottimizzazioni touch */
+        will-change: transform;
+        contain: layout style paint; /* Ottimizzazione rendering avanzata */
+        backface-visibility: hidden; /* Evita flickering */
+        /* Touch optimization */
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+        /* Layout stability */
+        contain-intrinsic-size: 280px 400px; /* Hint per layout shift prevention */
+        content-visibility: auto; /* Lazy rendering hint */
+        /* Performance transition */
+        transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .itinerary-card:hover {
+        transform: translateY(-4px) scale(1.01);
+        /* Ensure smooth animation */
+        will-change: transform;
+    }
+    
+    .itinerary-image {
+        height: 180px;
+        /* Enterprise image optimizations */
+        object-fit: cover;
+        object-position: center;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        /* Performance */
+        contain: layout style paint;
+        backface-visibility: hidden;
+        /* Loading optimization */
+        loading: lazy; /* Native lazy loading hint */
+        decoding: async; /* Async image decoding */
+        /* Layout stability */
+        contain-intrinsic-size: 280px 180px;
+    }
+    
+    .itinerary-title {
+        font-size: clamp(1.2rem, 5vw, 1.4rem);
+        margin: 1.2rem auto 0.8rem auto;
+        text-align: center;
+        background-color: rgba(127, 255, 212, 0);
+        border-radius: 5px;
+        /* Enterprise typography */
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "kern" 1, "liga" 1;
+        word-break: break-word; /* Evita overflow */
+        overflow-wrap: break-word;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        /* Performance */
+        contain: layout style;
+    }
+    
+    .itinerary-description {
+        font-size: clamp(1rem, 3.5vw, 1.2rem);
+        margin: 1rem auto 1.5rem auto;
+        line-height: 1.5;
+        text-align: center;
+        background-color: rgba(127, 255, 212, 0);
+        /* Enterprise typography */
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "kern" 1;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        /* Performance */
+        contain: layout style;
+    }
+    
+    .itinerary-button {
+        font-size: clamp(0.9rem, 3.5vw, 1rem);
+        padding: 0.75rem 1.5rem;
+        margin: 0 auto 1.5rem auto;
+        border-radius: 10px;
+        display: block;
+        width: fit-content;
+        /* Enterprise UX optimizations */
+        min-height: 44px; /* Touch compliance */
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+        -webkit-appearance: none;
+        appearance: none;
+        /* Performance */
+        contain: layout style;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        /* Typography */
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "kern" 1;
+        /* Accessibility */
+        outline-offset: 2px;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        /* Prevent text selection */
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+
+    /* ================================================================
+       MOBILE DRAG INDICATOR - ENTERPRISE UX
+       ================================================================ */
+    
+    .itineraries-grid::after {
+        content: '← Trascina →';
+        bottom: 0.5rem;
+        right: 1rem;
+        font-size: 0.8rem;
+        /* Enterprise UX improvements */
+        pointer-events: none; /* Non interferisce con touch */
+        user-select: none; /* Non selezionabile */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        opacity: 0.8; /* Più sottile */
+        animation: fadeInOut 3s infinite; /* Richiama attenzione */
+        /* Performance */
+        contain: layout style;
+        will-change: opacity;
+        transform: translateZ(0);
+        /* Typography */
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "kern" 1;
+        /* Positioning stability */
+        position: absolute;
+        z-index: 1;
+    }
+
+    /* ================================================================
+       FORM SECTION - ENTERPRISE UX & ACCESSIBILITY
+       ================================================================ */
+    
+    .form-section {
+        padding: 60px 0rem;
+        /* Performance */
+        contain: layout style;
+    }
+    
+    .form-content {
+        max-width: 100%;
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+        border-radius: 16px;
+        /* Performance */
+        contain: layout style;
+        backface-visibility: hidden;
+    }
+    
+    .form-title {
+        font-size: clamp(2rem, 8vw, 2rem);
+        margin-bottom: 0.8rem;
+        /* Typography optimization */
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "kern" 1, "liga" 1;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        /* Performance */
+        contain: layout style;
+    }
+    
+    .form-description {
+        font-size: clamp(1rem, 4vw, 1.2rem);
+        margin-bottom: 1.5rem;
+        /* Typography optimization */
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "kern" 1;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        line-height: 1.6; /* Migliore leggibilità */
+        /* Performance */
+        contain: layout style;
+    }
+    
+    .form-section form {
+        gap: 1.2rem;
+        /* Performance */
+        contain: layout style;
+    }
+
+    /* ================================================================
+       FORM INPUTS - ENTERPRISE ACCESSIBILITY & UX
+       ================================================================ */
+    
+    .form-section input[type="text"],
+    .form-section input[type="email"] {
+        padding: 0.9rem 1rem;
+        font-size: 0.95rem;
+        /* Enterprise UX enhancements */
+        border-radius: 12px; /* Consistency con design */
+        -webkit-appearance: none; /* Remove iOS styling */
+        appearance: none;
+        border: 2px solid transparent; /* Spazio per focus ring */
+        outline: none;
+        /* Touch optimization */
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        /* Performance */
+        contain: layout style;
+        backface-visibility: hidden;
+        /* Typography */
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "kern" 1;
+        /* Transition */
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        /* Accessibility */
+        min-height: 44px; /* Touch target minimum */
+    }
+
+    /* Enhanced focus states */
+    .form-section input[type="text"]:focus,
+    .form-section input[type="email"]:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        transform: translateZ(0); /* Ensure crisp rendering */
+    }
+
+    /* Placeholder enhancement */
+    .form-section input[type="text"]::placeholder,
+    .form-section input[type="email"]::placeholder {
+        opacity: 0.7;
+        transition: opacity 0.2s ease;
+    }
+
+    .form-section input[type="text"]:focus::placeholder,
+    .form-section input[type="email"]:focus::placeholder {
+        opacity: 0.5;
+    }
+
+    .form-section button[type="submit"] {
+        padding: 0.9rem;
+        font-size: 0.95rem;
+        /* Enterprise UX optimizations */
+        min-height: 44px; /* Touch compliance */
+        cursor: pointer; /* Esplicito */
+        -webkit-appearance: none;
+        appearance: none;
+        border: none;
+        border-radius: 12px;
+        /* Touch optimization */
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+        /* Performance */
+        contain: layout style;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        /* Typography */
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "kern" 1;
+        /* Transition */
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        /* Accessibility */
+        outline-offset: 2px;
+        /* Prevent text selection */
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+
+    /* Enhanced button states */
+    .form-section button[type="submit"]:hover {
+        transform: translateY(-1px) translateZ(0);
+    }
+
+    .form-section button[type="submit"]:active {
+        transform: translateY(0) translateZ(0);
+        transition-duration: 0.1s;
+    }
+
+    .form-section button[type="submit"]:focus-visible {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+    }
+}
+
+/* ================================================================
+   ENHANCED KEYFRAME FOR DRAG INDICATOR
+   ================================================================ */
+
+@keyframes fadeInOut {
+    0%, 100% { 
+        opacity: 0.8; 
+        transform: translateZ(0) scale(1);
+    }
+    50% { 
+        opacity: 0.4;
+        transform: translateZ(0) scale(0.98);
+    }
+}
+
+/* ================================================================
+   ENTERPRISE-LEVEL PERFORMANCE HINTS
+   ================================================================ */
+
+/* Critical resource hints for mobile */
+@media screen and (max-width: 480px) {
+    /* GPU layer hints for smooth scrolling */
+    .itineraries-grid,
+    .itinerary-card,
+    .hero-leoimg,
+    .hero-cta {
+        transform: translateZ(0);
+        will-change: transform;
+    }
+    
+    /* Layout containment for performance */
+    .container,
+    .content-section,
+    .itineraries,
+    .form-section {
+        contain: layout style;
+    }
+    
+    /* Paint containment for complex elements */
+    .itinerary-card,
+    .hero-leoimg,
+    .form-content {
+        contain: layout style paint;
+    }
+}
+
+
+
+
+
+
+
+
+/* ================================================================================================================================================================================================
+   4. MOBILE LARGE (481px - 599px)
+   ================================================================================================================================================================================================ */
+
+@media screen and (min-width: 481px) and (max-width: 599px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .hero {
+        padding: 120px 1.5rem 60px;
+    }
+    
+    .hero-title {
+        font-size: clamp(2.4rem, 5vw, 2.8rem);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1.3rem, 3.5vw, 1.5rem);
+    }
+    
+    .hero-cta {
+        font-size: 1rem;
+        padding: 1rem 2.2rem;
+    }
+    
+    .main-content {
+        padding: 85px 0 65px;
+    }
+    
+    .content-section {
+        margin-bottom: 65px;
+    }
+    
+    .content-title {
+        font-size: clamp(2.1rem, 4vw, 2.4rem);
+    }
+    
+    .content-description {
+        font-size: 1.15rem;
+    }
+    
+    .image-container {
+        margin-bottom: 2.5rem;
+    }
+    
+    /* Itinerari ottimizzati */
+    .itineraries {
+        padding: 90px 0;
+    }
+    
+    .itineraries .section-title {
+        font-size: clamp(2.3rem, 5vw, 2.6rem);
+    }
+    
+    .itineraries .section-subtitle {
+        font-size: clamp(1.1rem, 3vw, 1.3rem);
+        padding: 0 1.5rem;
+    }
+    
+    .itineraries-grid {
+        gap: 1.8rem;
+        padding: 1.8rem 0 2.5rem 1.5rem;
+    }
+    
+    .itinerary-card {
+        flex: 0 0 320px;
+    }
+    
+    .itinerary-image {
+        height: 200px;
+    }
+    
+    /* Form ottimizzato */
+    .form-content {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 2.2rem;
+    }
+    
+    .form-title {
+        font-size: clamp(2.1rem, 5vw, 2.3rem);
+    }
+    
+    .form-description {
+        font-size: clamp(1.1rem, 3vw, 1.3rem);
+    }
+    
+    .form-section input[type="text"],
+    .form-section input[type="email"] {
+        padding: 0.95rem 1.1rem;
+        font-size: 1rem;
+    }
+}
+
+/* ================================================================================================================================================================================================
+   5. TABLET PORTRAIT (600px - 767px)
+   ================================================================================================================================================================================================ */
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    .container {
+        padding: 0 2rem;
+    }
+    
+    .hero {
+        padding: 130px 2rem 70px;
+    }
+    
+    .hero-title {
+        font-size: clamp(2.8rem, 4vw, 3.2rem);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1.4rem, 2.5vw, 1.6rem);
+    }
+    
+    .nav-container {
+        padding: 0 2rem;
+    }
+    
+    .main-content {
+        padding: 90px 0 70px;
+    }
+    
+    .content-section {
+        margin-bottom: 75px;
+    }
+    
+    .content-title {
+        font-size: clamp(2.3rem, 3.5vw, 2.6rem);
+    }
+    
+    .image-container {
+        max-width: 80%;
+        margin: 0 auto 3rem auto;
+    }
+    
+    /* Itinerari tablet portrait */
+    .itineraries {
+        padding: 100px 0;
+    }
+    
+    .itineraries-grid {
+        gap: 2rem;
+        padding: 2rem 0 3rem 2rem;
+    }
+    
+    .itinerary-card {
+        flex: 0 0 340px;
+    }
+    
+    .itinerary-image {
+        height: 220px;
+    }
+    
+    /* Form tablet portrait */
+    .form-content {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 2.5rem;
+    }
+    
+    .form-title {
+        font-size: clamp(2.3rem, 3vw, 2.5rem);
+    }
+}
+
+/* ================================================================================================================================================================================================
+   6. TABLET LANDSCAPE (768px - 1023px)
+   ================================================================================================================================================================================================ */
+
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 120px 1rem 60px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .content-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .cta-title {
+        font-size: 2.2rem;
+    }
+
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .main-content {
+        padding: 80px 0 60px;
+    }
+
+    .content-section {
+        margin-bottom: 60px;
+    }
+
+    .image-container {
+        margin-bottom: 2rem;
+        max-width: 100%;
+    }
+
+    .placeholder-image {
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    /* Navigation mobile per tablet landscape */
+    .nav-menu {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+        display: -ms-flexbox;
+        -ms-flex-direction: column;
+        visibility: visible;
+    }
+    
+    .hero {
+        padding: 130px 2.5rem 80px;
+    }
+    
+    .hero-title {
+        font-size: clamp(3.2rem, 3.5vw, 3.8rem);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1.5rem, 2vw, 1.7rem);
+    }
+    
+    .main-content {
+        padding: 100px 0 80px;
+    }
+    
+    .content-section {
+        margin-bottom: 85px;
+    }
+    
+    .content-title {
+        font-size: clamp(2.4rem, 3vw, 2.8rem);
+    }
+    
+    .section-title {
+        font-size: clamp(2.6rem, 2.8vw, 3rem);
+    }
+    
+    .cta-title {
+        font-size: clamp(2.6rem, 2.8vw, 3rem);
+    }
+    
+    /* Itinerari tablet landscape - mantiene carousel */
+    .itineraries-grid {
+        gap: 2.5rem;
+        padding: 2.5rem 0 3rem 2.5rem;
+    }
+    
+    .itinerary-card {
+        flex: 0 0 360px;
+    }
+    
+    .itinerary-image {
+        height: 240px;
+    }
+    
+    /* Form tablet landscape */
+    .form-content {
+        max-width: 550px;
+        margin: 0 auto;
+        padding: 2.8rem;
+    }
+}
+
+/* ================================================================================================================================================================================================
+   7. DESKTOP SMALL (1024px+) - OTTIMIZZATO
+   ================================================================================================================================================================================================ */
+
+@media screen and (max-width: 1024px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+        display: -ms-flexbox;
+        -ms-flex-direction: column;
+    }
+
+    .testimonials-grid {
+        display: block;
+    }
+
+    .testimonial-card {
+        margin-bottom: 2.5rem;
+    }
+
+    .content-section {
+        margin-bottom: 80px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .container {
+        max-width: 1200px;
+        padding: 0 2.5rem;
+    }
+    
+    /* Ripristina navigation desktop */
+    .nav-menu {
+        display: flex;
+        display: -ms-flexbox;
+        -ms-flex-direction: row;
+    }
+    
+    .mobile-menu-btn {
+        display: none;
+        visibility: hidden;
+    }
+    
+    .hero {
+        padding: 140px 2.5rem 90px;
+    }
+    
+    .hero-title {
+        font-size: clamp(3.8rem, 3vw, 4.2rem);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1.6rem, 1.5vw, 1.8rem);
+    }
+    
+    .main-content {
+        padding: 110px 0 90px;
+    }
+    
+    .content-section {
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        gap: 4rem;
+    }
+    
+    .content-section.slide-in-right {
+        flex-direction: row-reverse;
+    }
+    
+    .image-container {
+        flex: 0 0 45%;
+        margin-bottom: 0;
+        max-width: none;
+    }
+    
+    .content-block {
+        flex: 1;
+        max-width: none;
+        padding: 0;
+    }
+    
+    .content-title {
+        font-size: clamp(2.6rem, 2.2vw, 3rem);
+    }
+    
+    /* Desktop grid per itinerari */
+    .itineraries {
+        padding: 130px 0;
+    }
+    
+    .itineraries-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+        overflow: visible;
+        padding: 3rem 0;
+        cursor: default;
+    }
+    
+    .itinerary-card {
+        flex: none;
+    }
+    
+    .itinerary-card:hover {
+        transform: translateY(-8px) scale(1.02);
+    }
+    
+    .itinerary-image {
+        height: auto;
+    }
+    
+    /* Nasconde drag indicator su desktop */
+    .itineraries-grid::after {
+        display: none;
+    }
+    
+    .form-content {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 3rem;
+    }
+}
+
+/* ================================================================================================================================================================================================
+   8. DESKTOP LARGE (1200px+)
+   ================================================================================================================================================================================================ */
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+        padding: 0 3rem;
+    }
+    
+    .hero {
+        padding: 150px 3rem 100px;
+    }
+    
+    .hero-title {
+        font-size: clamp(4.2rem, 2.5vw, 4.8rem);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1.7rem, 1.2vw, 1.9rem);
+    }
+    
+    .main-content {
+        padding: 120px 0 100px;
+    }
+    
+    .content-section {
+        margin-bottom: 120px;
+        gap: 5rem;
+    }
+    
+    .image-container {
+        flex: 0 0 50%;
+    }
+    
+    .content-title {
+        font-size: clamp(2.8rem, 2vw, 3.2rem);
+    }
+    
+    .itineraries {
+        padding: 140px 0;
+    }
+    
+    .itineraries-grid {
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        gap: 3rem;
+    }
+    
+    .form-content {
+        max-width: 650px;
+        padding: 3.5rem;
+    }
+}
+
+/* ================================================================================================================================================================================================
+   9. DESKTOP ULTRA WIDE (1600px+)
+   ================================================================================================================================================================================================ */
+
+@media screen and (min-width: 1600px) {
+    .container {
+        max-width: 1600px;
+        padding: 0 4rem;
+    }
+    
+    .content-section {
+        gap: 6rem;
+    }
+    
+    .itineraries-grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 3.5rem;
+    }
+}
+
+/* ================================================================================================================================================================================================
+   10. PERFORMANCE E ACCESSIBILITÀ
+   ================================================================================================================================================================================================ */
+
+/* High DPI displays */
+@media screen and (min-resolution: 192dpi),
+       screen and (min-resolution: 2dppx) {
+    .hero-leoimg,
+    .itinerary-image,
+    .logo {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Landscape orientation mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding: 80px 1rem 40px;
+    }
+    
+    .hero-title {
+        font-size: clamp(2rem, 5vw, 2.8rem);
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1rem, 3vw, 1.3rem);
+        margin-bottom: 1.5rem;
+    }
+    
+    .main-content {
+        padding: 60px 0 40px;
+    }
+    
+    .content-section {
+        margin-bottom: 50px;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .hero-content {
+        animation: none;
+    }
+    
+    .content-section {
+        transform: none !important;
+        opacity: 1 !important;
+    }
+    
+    .itinerary-card:hover,
+    .hero-cta:hover {
+        transform: none !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .mobile-menu-btn,
+    .dropdown,
+    .cta-section,
+    .form-section {
+        display: none !important;
+    }
+    
+    .hero {
+        background: none !important;
+        padding: 2rem !important;
+        page-break-after: always;
+    }
+    
+    .hero-leoimg {
+        display: none !important;
+    }
+    
+    .itineraries-grid {
+        display: block !important;
+    }
+    
+    .itinerary-card {
+        break-inside: avoid;
+        margin-bottom: 2rem;
+    }
+}
+
+/* ================================================================================================================================================================================================
+   11. IE SPECIFIC FALLBACKS (MANTENUTO ORIGINALE)
+   ================================================================================================================================================================================================ */
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .content-section {
+        display: block;
+        text-align: center;
+    }
+
+    .content-section>div {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* ================================================================================================================================================================================================
+   12. UTILITY CLASSES (MANTENUTO ORIGINALE)
+   ================================================================================================================================================================================================ */
+
+.text-center {
+    text-align: center;
+}
+
+.mb-2 {
+    margin-bottom: 1rem;
+}
+
+.mb-3 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 2rem;
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+
+/* ================================================================
+   FINE MEDIA QUERIES OTTIMIZZATE
+   ================================================================ */
